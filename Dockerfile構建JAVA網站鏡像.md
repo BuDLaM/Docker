@@ -26,4 +26,29 @@ export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
 12. cd bin
 13. ls -lrt
 14. ./startup.sh
-15. 
+15. website: http://xxx.xxx.xxx.xxx:8080
+16. 如無法進入關閉防火牆: systemctl stop firewalld.service
+17. 查看防火牆: firewall-cmd --state
+
+```
+關閉tomcat
+1. pkill tomcat / kill xxxxx
+2. ps -ef | grep tomcat (查看xxxxx)
+```
+
+<h2>Dockerfile配置</h2>
+
+```
+FROM centos:7
+ADD jdk-8u211-linux-x64.tar.gz /usr/local
+RUN mv /usr/local/jdk1.8.0_211 /usr/local/jdk
+ENV JAVA_HOME=/usr/local/jdk
+ENV JRE_HOME=$JAVA_HOME/jre
+ENV CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+ENV PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
+ADD apache-tomcat-8.5.35.tar.gz /usr/local
+RUN mv /usr/local/apache-tomcat-8.5.35 /usr/local/tomcat
+EXPOSE 8080
+ENTRYPOINT ["/usr/local/tomcat/bin/catalina.sh","run"]
+
+```
