@@ -50,5 +50,15 @@ ADD apache-tomcat-8.5.35.tar.gz /usr/local
 RUN mv /usr/local/apache-tomcat-8.5.35 /usr/local/tomcat
 EXPOSE 8080
 ENTRYPOINT ["/usr/local/tomcat/bin/catalina.sh","run"]
-
 ```
+
+1. 在相同目錄下創建Dockerfile
+2. 貼上以上文本
+3. 創建容器: docker build -t mycentos:jdk .
+4. 啟動容器: docker run -itd -p 80:8080 mycentos:jdk /bin/bash
+
+防火牆報錯: 
+
+![image](https://github.com/user-attachments/assets/577efd5b-4d99-4a74-a93c-8f2cfffb1635)
+
+1. systemctl start firewalld.service
