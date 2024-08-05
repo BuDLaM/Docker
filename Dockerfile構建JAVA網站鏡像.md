@@ -62,3 +62,5 @@ ENTRYPOINT ["/usr/local/tomcat/bin/catalina.sh","run"]
 ![image](https://github.com/user-attachments/assets/577efd5b-4d99-4a74-a93c-8f2cfffb1635)
 
 1. systemctl start firewalld.service
+2. docker ps
+3. website: http:xxx.xxx.xxx.xxxx:80
