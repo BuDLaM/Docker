@@ -20,7 +20,8 @@
    - 容器啟動後執行默認的命令或參數，允許被修改
 
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/7937a749-3fde-4c1c-9909-474c1fcc3ecc)
+
 
 
 ![image](https://github.com/user-attachments/assets/bdabae74-16be-4eae-8844-e641422ec6f4)
