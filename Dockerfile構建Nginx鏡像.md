@@ -16,4 +16,9 @@ FROM centos:7
 ADD nginx-1.16.0.tar.gz /usr/local
 COPY nginx_install.sh /usr/local
 RUN sh /usr/local/nginx_install.sh
+EXPOSR 80
 ```
+
+1. dokcer build -t mycentos:nginx .
+2. docker run -itd -p 80:80 mycentos:nginx /usr/local/nginx/sbin/nginx -g "daemon off;" (前台啟動:-g "daemon off;")
+3. 
