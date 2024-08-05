@@ -29,5 +29,10 @@
 5. 下載Centos 7本地鏡像: docker pull centos:7
 6. 修改本地鏡像名字(小寫): docker tag centos:7 mycentos:1
 7. 刪除本地鏡像: docker rmi <name>
-8. 
-</name>
+
+<H2>Docker 國內阿里云鏡像加速</H2>
+1. 登錄阿里云 > 控制台
+2. 左上角 > 產品與服務 > 搜索: 容器
+3. 選和器鏡像服務 > 鏡像加速器 
+4. 加速器地址 > 操作文檔 > Centos
+5. Copy > paste
