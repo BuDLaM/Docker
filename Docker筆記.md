@@ -53,3 +53,10 @@
 9. 強制刪除鏡像: docker rm -f <name>
 10. 查看容器詳細信息: docker inspect <name>
 11. 進入容器:docker -it exec <name> /bin/bash
+
+<H2>Docker容器的文件複製和掛載</H2> 
+1. 從宿主機複製到容器: docker cp 宿主機本地路徑 容器名字:容器路徑
+   - docker cp /root/123.txt mycentos:/home/
+2. 從容器複製到宿主機: docker cp 容器名字:容器路徑 宿主機本地路徑
+   - docker cp mycentos:/home/123.txt /root
+3. 宿主機文件掛載(文件自動同步)到容器裡: 
