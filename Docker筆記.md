@@ -20,3 +20,14 @@
 12. 啟動Docker: systemctl start docker
 13. 查看版本: docker version
 14. 查看詳細信息: docker info
+
+<H2>Docker 鏡像實戰 </H2>
+1. 查看Docker本地鏡像: docker images
+2. 搜索鏡像: docker search centos
+3. 搜索官方鏡像: docker search --filter "is-official=true" centos
+4. 搜索>10顆星的鏡像: docker search --filter stars=10 centos
+5. 下載Centos 7本地鏡像: docker pull centos:7
+6. 修改本地鏡像名字(小寫): docker tag centos:7 mycentos:1
+7. 刪除本地鏡像: docker rmi <name>
+8. 
+</name>
