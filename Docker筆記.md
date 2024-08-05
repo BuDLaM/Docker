@@ -84,4 +84,26 @@
      7. exit
      8. docker commit -a <作者> -m <描述> <現有容器> <新版本容器>
         - docker commit -a "XD" -m "mkdir /home/xdclass" <container id> mycentos:v1
-      
+
+<h2>Docker構建鏡像</h2>
+
+Dockerfile構建鏡像實戰
+1. Dockerfile
+
+```
+# this is a dockerfile
+FROM centos:7
+MAINTAINER XD 12345@qq.com (指名作者 郵箱)
+RUN echo "正在構建鏡像"
+WORKDIR /home/xdclass
+COPY 123.txt /home/xdclass (絕對路徑, 123.txt路徑放在Dockerfile路徑裡)
+RUN yum install -y net-tools
+```
+
+Linux:
+1. cd ~
+2. vi dockerfile
+3. paste dockerfile 內容
+4. 123.txt 要和 dockerfile 路徑一致
+5. docker build -t mycentos:v2
+6. docker images
