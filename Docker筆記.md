@@ -22,6 +22,7 @@
 14. 查看詳細信息: docker info
 
 <H2>Docker 鏡像實戰 </H2>
+
 1. 查看Docker本地鏡像: docker images
 2. 搜索鏡像: docker search centos
 3. 搜索官方鏡像: docker search --filter "is-official=true" centos
@@ -31,6 +32,7 @@
 7. 刪除本地鏡像: docker rmi <name>
 
 <H2>Docker 國內阿里云鏡像加速</H2>
+
 1. 登錄阿里云 > 控制台
 2. 左上角 > 產品與服務 > 搜索: 容器
 3. 選和器鏡像服務 > 鏡像加速器 
@@ -38,6 +40,7 @@
 5. Copy > paste
 
 <H2>Docker容器構建基本操作</H2>
+
 1. 啟動容器: docker run -it/itd centos:7
    - -i: 表示以交互模式運行容器(讓容器的標準輸入保持打開)
    - -d: 表示後台運行容器，并返回容器ID，並啟動
@@ -55,6 +58,7 @@
 11. 進入容器:docker -it exec <name> /bin/bash
 
 <H2>Docker容器的文件複製和掛載</H2> 
+
 1. 從宿主機複製到容器: docker cp 宿主機本地路徑 容器名字:容器路徑
    - docker cp /root/123.txt mycentos:/home/
 2. 從容器複製到宿主機: docker cp 容器名字:容器路徑 宿主機本地路徑
@@ -63,3 +67,21 @@
    - mkdir xdclass
    - docker run -itd -v /root/xdclass/:/home centos:7 (-v 掛載)
    
+<H2>Docker自定義鏡像</H2>
+
+1. Docker目前鏡像制作方法:
+   - 基於Docker Commit制作鏡像
+   - 基於DockerFile制作鏡像，Dockefile方式為主流的制作鏡像方式
+
+2. 修改容器以及保存容器
+   - 啟動并進入容器
+     1. docker run -it centos:7 /bin/bash
+     2. cd /home/
+     3. mkdir xdclass
+     4. ifconfig (沒有內容)
+     5. yum install -y net-tools
+     6. ifconfig (有內容)
+     7. exit
+     8. docker commit -a <作者> -m <描述> <現有容器> <新版本容器>
+        - docker commit -a "XD" -m "mkdir /home/xdclass" <container id> mycentos:v1
+      
