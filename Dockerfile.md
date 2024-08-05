@@ -1,5 +1,9 @@
 <H2>Dockerfile基礎指令</H2>
 
+命令格式:
+- shell命令格式: RUN yum install -y net-tools
+- exec命令格式: RUN ["yum","install","-y","net-tools"]
+
 1. FORM
 2. MAINTAINER
 3. COPY
