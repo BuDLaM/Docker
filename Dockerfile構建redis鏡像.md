@@ -13,11 +13,13 @@ cp /home/redis-4.0.9/redis.conf /usr/local/redis/conf
 
 手動啟動 
 
+```
 1. echo $?
 2. cd /usr/local/redis/
 3. ls -lrt
 4. ls -lrt conf/
 5. /usr/local/redis/bin/redis-server /usr/local/redis/conf/redis.conf
+```
 
 Dockerfile
 
