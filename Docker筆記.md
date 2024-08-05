@@ -36,3 +36,20 @@
 3. 選和器鏡像服務 > 鏡像加速器 
 4. 加速器地址 > 操作文檔 > Centos
 5. Copy > paste
+
+<H2>Docker容器構建基本操作</H2>
+1. 啟動容器: docker run -it/itd centos:7
+   - -i: 表示以交互模式運行容器(讓容器的標準輸入保持打開)
+   - -d: 表示後台運行容器，并返回容器ID，並啟動
+   - -t :為容器重新分配一個偽輸入終端
+   - --name: 為容器指定名稱
+2. 查看本地所有容器: docker images
+3. 查看本地正在運行的容器: docker ps -a
+4. 停止容器: docker stop <name>
+5. 一次性停止所有容器: docker stop $(docker ps -a -q)
+6. 啟動容器: docker start <name> 
+7. 重啟容器: docker restart <name>
+8. 刪除容器: docker rm <name> 
+9. 強制刪除鏡像: docker rm -f <name>
+10. 查看容器詳細信息: docker inspect <name>
+11. 進入容器:docker exec <name> /bin/bash
