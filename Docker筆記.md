@@ -59,4 +59,7 @@
    - docker cp /root/123.txt mycentos:/home/
 2. 從容器複製到宿主機: docker cp 容器名字:容器路徑 宿主機本地路徑
    - docker cp mycentos:/home/123.txt /root
-3. 宿主機文件掛載(文件自動同步)到容器裡: 
+3. 宿主機文件掛載(文件自動同步)到容器裡:  (啟動中的容器無法掛載)
+   - mkdir xdclass
+   - docker run -itd -v /root/xdclass/:/home centos:7 (-v 掛載)
+   
