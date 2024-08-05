@@ -6,7 +6,7 @@
    - Docker EE 企業版本
    - Docker CE 社區版本
   
-4. 關閉防火牆: systemctl stop firewalld.service > vi/etc/selinux/config
+4. 關閉防火牆: systemctl stop firewalld.service > vi/etc/selinux/config > SELINUX=enforce > SELINUX=disable
 5. 安裝Docker CE社區版
 6. 安裝wget命令: yum install -y wget
 7. 下載阿里云Docker社區版VUM源
