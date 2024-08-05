@@ -57,6 +57,14 @@ ENTRYPOINT ["/usr/local/tomcat/bin/catalina.sh","run"]
 3. 創建容器: docker build -t mycentos:jdk .
 4. 啟動容器: docker run -itd -p 80:8080 mycentos:jdk /bin/bash
 
+掛載方法:
+4. mkdir ROOT
+5. ls -lrt
+6. cd ROOT/
+7. pwd
+8. docker run -itd -p 80:8080 -v /root/test/ROOT:/usr/local/tomcat/webapps/ROOT /root/test/ROOT
+9. 驗證: ls -lrt > vi index.html > Hello World
+
 防火牆報錯: 
 
 ![image](https://github.com/user-attachments/assets/577efd5b-4d99-4a74-a93c-8f2cfffb1635)
