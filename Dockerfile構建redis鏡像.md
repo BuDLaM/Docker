@@ -55,4 +55,5 @@ ENTRYPOINT /usr/local/redis/bin/redis-server /usr/local/redis/conf/redis.conf
 通過IP地址連接:
 22. docker inspect mycentos:redis > NetworkSetting > "IPAddress"
 23. /usr/local/redis/bin/redis-cli -h xxx.xxx.xxx.xxx 6379
-24. 
+24. set name okok
+25. get name 
