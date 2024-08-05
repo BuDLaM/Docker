@@ -58,6 +58,7 @@ ENTRYPOINT ["/usr/local/tomcat/bin/catalina.sh","run"]
 4. 啟動容器: docker run -itd -p 80:8080 mycentos:jdk /bin/bash
 
 掛載方法:
+
 4. mkdir ROOT
 5. ls -lrt
 6. cd ROOT/
