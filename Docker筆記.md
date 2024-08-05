@@ -52,4 +52,4 @@
 8. 刪除容器: docker rm <name> 
 9. 強制刪除鏡像: docker rm -f <name>
 10. 查看容器詳細信息: docker inspect <name>
-11. 進入容器:docker exec <name> /bin/bash
+11. 進入容器:docker -it exec <name> /bin/bash
