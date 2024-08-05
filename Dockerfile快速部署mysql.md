@@ -28,6 +28,10 @@
 21. docker run --name some-mysql -p 3307:3306 -e MYSQL_ROOT_PASSWORD=abc12345678 -d my-mysql:5.7
 22. docker exec -it mysql /bin/bash
 23. ls -lrt
+24. mysql -uroot -pabc12345678
+25. show databases;
+26. select * from db_student.user;
+
 
 
 
