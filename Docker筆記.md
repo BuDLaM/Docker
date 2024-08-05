@@ -105,5 +105,6 @@ Linux:
 2. vi dockerfile
 3. paste dockerfile 內容
 4. 123.txt 要和 dockerfile 路徑一致
-5. docker build -t mycentos:v2
-6. docker images
+5. 構建: docker build -t mycentos:v2
+6. 查看: docker images
+7. 驗證: 進入驗證
