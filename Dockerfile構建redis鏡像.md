@@ -1,6 +1,6 @@
 <h2>Dockerfile構建redis</h2>
 
-Shell 腳本
+Shell 腳本安裝redis
 
 ```
 #!/bin/bash
@@ -11,7 +11,7 @@ mkdir -p /usr/local/redis/conf/
 cp /home/redis-4.0.9/redis.conf /usr/local/redis/conf
 ```
 
-手動啟動 
+手動啟動Redis
 
 ```
 1. echo $?
@@ -30,3 +30,6 @@ COPY redis_install.sh /home
 RUN sh /home/redis_install.sh
 ENTRYPOINT /usr/local/redis/bin/redis-server /usr/local/redis/conf/redis.conf
 ```
+
+1. docker build -t mycentos:redis .
+2. 
