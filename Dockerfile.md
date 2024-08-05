@@ -9,8 +9,12 @@
 8. EXPOSE: 暴露端口
 執行命令
 9. RUN: 作用在鏡像層
-10. ENTRYPOINT: 作用在容器層
-11. CMD: 作用在容器層，可覆蓋
+   - 在構建鏡像的時候執行，作用於鏡像層
+11. ENTRYPOINT: 作用在容器層
+   - 在容器啟動的時候執行，作用於容器層，Dockerfile里有多條時只允許執行最後一條
+13. CMD: 作用在容器層，可覆蓋
+   - 在容器啟動的時候執行，作用於容器層，Dorkerfile里有多條時只允許執行最後一條
+   - 容器啟動後執行默認的命令或參數，允許被修改 
 
 ![image](https://github.com/user-attachments/assets/bdabae74-16be-4eae-8844-e641422ec6f4)
 
