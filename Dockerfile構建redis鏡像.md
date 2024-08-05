@@ -32,4 +32,27 @@ ENTRYPOINT /usr/local/redis/bin/redis-server /usr/local/redis/conf/redis.conf
 ```
 
 1. docker build -t mycentos:redis .
-2. 
+2. docker images
+3. docker run -itd mycentos:redis
+4. docker ps
+5. docker exec -it mycentos:redis /bin/bash
+6. ps -ef | grep redis
+7. /usr/local/redis/bin/redis-cli (進入redis客戶端驗證)
+8. set name xdclass
+9. get name
+10. exit
+11. exit
+12. docker run -itd -p 6380:6379 mycentos:redis
+13. docker ps
+14. /usr/local/redis/bin/redis-cli -p 6380
+15. set name xdclass > failed
+16. docker exec -it mycentos:reids /bin/bash
+17. vi /usr/local/redis/conf/redis.conf  > protected-mode yes > protected-mode no > bind 127.0.0.1 > #bind 127.0.0.1
+18. docker restart mycentos:redis
+19. /usr/local/redis/bin/redis-cli -p 6380
+20. set name xdclass
+21. get name
+通過IP地址連接:
+22. docker inspect mycentos:redis > NetworkSetting > "IPAddress"
+23. /usr/local/redis/bin/redis-cli -h xxx.xxx.xxx.xxx 6379
+24. 
