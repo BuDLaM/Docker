@@ -19,5 +19,12 @@
 > 查看網絡模式
 > docker network ls
 
+> 查看端口的使用情況
+> netstat -tunlp | grep 80
+
+> 防火牆相關知識: 打通80端口
+> firewall-cmd --state
+> firewall-cmd --zone=public --add-port=80/tcp --permanent
+
 
 ![image](https://github.com/user-attachments/assets/ad4e3a19-3d72-4ac6-be8d-6120313c6780)
