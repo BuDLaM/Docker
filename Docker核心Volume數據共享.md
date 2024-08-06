@@ -38,3 +38,6 @@ VOLUME["/usr/local"]
 19. docker run -itd -p 8081:80 --volumes-from nginx1 --name nginx2 mycentos:nginx /usr/local/nginx/sbin/nginx -g "daemon off;"
 20. docker inspect nginx2
 21. docker run -itd -p 8082:80 --volumes-from nginx1 --name nginx3 mycentos:nginx /usr/local/nginx/sbin/nginx -g "daemon off;"
+驗證
+22. cat >index.html > this is docker nginx!!!
+23. cat index.html
