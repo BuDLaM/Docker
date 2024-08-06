@@ -3,10 +3,10 @@
 
 Compose的安裝
   - 安裝pip工具
-    yum install -y python-pip 安裝不了跳下再安裝
-    yum install -y epel-relase
+    1. yum install -y epel-relase
+    2. yum install -y python-pip 
 
-> 安裝還是失敗
+> *安裝pip報錯*
 > echo $?
 > cd /etc/yum.repos.d/
 > ls -lrt
