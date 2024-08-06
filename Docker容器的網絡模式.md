@@ -1,7 +1,7 @@
 <h2>Docker網絡模式</h2>
 
 - 默認的三種網絡模式:
-  1. bridge: 橋接模式
+  1. bridge: 橋接模式 (默認模式)
      - docker0虛擬網橋
     
      - 安裝工具:
@@ -11,8 +11,8 @@
 
   2. host: 主機模式
      - 容器不再擁有自己的IP地址，而是使用宿主機的IP地址和端口
-     - 
-
+    
+      修改為主機模式: docker run -itd --net=host mycentos:nginx
 
   3. none: 無網絡模式
  
