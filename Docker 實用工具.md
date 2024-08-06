@@ -4,7 +4,9 @@
 Compose的安裝
   - 安裝pip工具
     1. yum install -y epel-relase
-    2. yum install -y python-pip 
+    2. yum install -y python-pip
+    3. pip install docker-compose==1.24.1
+    4. 查看是否安裝成功: docker-compose version
 
 > *安裝pip報錯*
 > echo $?
