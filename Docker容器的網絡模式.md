@@ -12,7 +12,7 @@
   2. host: 主機模式
      - 容器不再擁有自己的IP地址，而是使用宿主機的IP地址和端口
     
-      修改為主機模式: docker run -itd --net=host mycentos:nginx
+      修改為主機模式: docker run -itd --net=host mycentos:nginx /usr/local/nginx/sbin/nginx  -g "daemon off;"
 
   3. none: 無網絡模式
  
